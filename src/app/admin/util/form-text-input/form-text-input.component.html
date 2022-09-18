@@ -1,0 +1,13 @@
+<div class="form-group">
+  <label>{{ label }} {{ isItRequired() }}</label>
+  <input
+    [formControl]="control"
+    type="text"
+    class="form-control"
+    [placeholder]="placeholder"
+    [class.is-invalid]="control.invalid && control.touched"
+  />
+  <div class="error-cont" *ngIf="control.invalid && control.touched">
+    <p *ngIf="control.hasError('required')">This field is required</p>
+  </div>
+</div>

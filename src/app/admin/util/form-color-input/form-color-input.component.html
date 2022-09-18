@@ -1,0 +1,13 @@
+<div class="form-group">
+  <label>{{ label }}*</label>
+  <input
+    [formControl]="control"
+    type="color"
+    class="form-control form-control-color"
+    [placeholder]="placeholder"
+    [class.is-invalid]="control.invalid && control.touched"
+  />
+  <div class="error-cont" *ngIf="control.invalid && control.touched">
+    <p *ngIf="control.hasError('required')">This field is required</p>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div>
+  <h1>New Color</h1>
+  <form [formGroup]="colorForm" (ngSubmit)="onAddColor()">
+    <app-form-text-input
+      [control]="name"
+      [label]="'Name'"
+      [placeholder]="'Enter the name of the color'"
+    ></app-form-text-input>
+    <app-form-color-input
+      [control]="color"
+      [label]="'Color'"
+      [placeholder]="'Enter the name of the color'"
+    ></app-form-color-input>
+    <button
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="colorForm.invalid"
+    >
+      Add Color
+    </button>
+  </form>
+</div>

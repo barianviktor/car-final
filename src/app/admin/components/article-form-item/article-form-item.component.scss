@@ -1,0 +1,19 @@
+.article-form-item{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+.article-form{
+    grid-column-start: 1;
+    grid-column-end: 6;
+    padding: 5px;
+}
+.article-preview{
+    grid-column-start: 6;
+    grid-column-end: 12;
+    padding: 5px;
+    text-align: center;
+    word-break: break-all;
+}
+.article-preview img{
+    width: 95%;
+}

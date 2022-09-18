@@ -1,0 +1,86 @@
+{
+  "colors": [
+    {
+      "name": "Black",
+      "color": "#000000",
+      "id": 1
+    },
+    {
+      "name": "Astro Black",
+      "color": "#0d0d0d",
+      "id": 2
+    },
+    {
+      "name": "Red",
+      "color": "#f52929",
+      "id": 3
+    },
+    {
+      "name": "Granite Gray",
+      "color": "#676767",
+      "id": 4
+    }
+  ],
+  "makers": [
+    {
+      "name": "Mercedes-Benz",
+      "icon_path": "https://logodownload.org/wp-content/uploads/2014/04/mercedes-benz-logo-4-1.png",
+      "id": 1
+    },
+    {
+      "name": "BMW",
+      "icon_path": "https://logodownload.org/wp-content/uploads/2014/04/bmw-logo-5.png",
+      "id": 2
+    },
+    {
+      "name": "Porsche",
+      "icon_path": "https://logodownload.org/wp-content/uploads/2021/02/porsche-logo-7.png",
+      "id": 3
+    }
+  ],
+  "designs": [
+    {
+      "id": 0,
+      "name": "Sedan"
+    },
+
+    {
+      "id": 1,
+      "name": "Hatchback"
+    },
+    {
+      "id": 2,
+      "name": "Coupe"
+    },
+    {
+      "id": 3,
+      "name": "Wagon"
+    },
+    {
+      "id": 4,
+      "name": "Convertible"
+    },
+    {
+      "id": 5,
+      "name": "Off Road / SUV"
+    },
+    {
+      "id": 6,
+      "name": "Pickup Truck"
+    },
+    {
+      "id": 7,
+      "name": "Van / Minivan"
+    }
+  ],
+  "motors": [
+    { "id": 0, "name": "Electric" },
+    { "id": 1, "name": "Plug in Hybrid" },
+    { "id": 2, "name": "Gasoline" },
+    { "id": 3, "name": "Diesel" }
+  ],
+  "transmission": [
+    { "id": 0, "name": "Automatic" },
+    { "id": 1, "name": "Manual" }
+  ]
+}

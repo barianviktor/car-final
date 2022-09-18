@@ -1,0 +1,28 @@
+<div class="article-form-item">
+  <div class="article-form">
+    <h4>Article {{ index + 1 }}</h4>
+    <app-form-text-input
+      [control]="title"
+      [label]="'Article Title'"
+      [placeholder]="'Please Insert Articles Title'"
+    ></app-form-text-input>
+    <app-form-text-input
+      [control]="description"
+      [label]="'Article Description'"
+      [placeholder]="'Please Insert Articles Description'"
+    ></app-form-text-input>
+    <app-form-text-input
+      [control]="image"
+      [label]="'Article Image'"
+      [placeholder]="'Please insert Articles Image'"
+    ></app-form-text-input>
+    <button (click)="onRemoveArticle()" class="btn btn-danger">
+      Remove Article
+    </button>
+  </div>
+  <div class="article-preview">
+    <h5>{{ title.value }}</h5>
+    <p>{{ description.value }}</p>
+    <img [src]="image.value" />
+  </div>
+</div>

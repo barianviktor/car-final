@@ -1,0 +1,9 @@
+<div>
+  <app-article-form-item
+    *ngFor="let article of articles.controls; let i = index"
+    [articleForm]="castArticle(article)"
+    [index]="i"
+    (removeArticle)="removeItem($event)"
+  ></app-article-form-item>
+  <button (click)="onAddArticle()" class="btn btn-primary">Add Article</button>
+</div>

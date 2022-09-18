@@ -1,0 +1,27 @@
+<div>
+  <h1>New Maker</h1>
+  <form [formGroup]="makerForm" (ngSubmit)="onAddMaker()">
+    <app-form-text-input
+      [control]="name"
+      [label]="'Makers Name'"
+      [placeholder]="'Please insert makers name'"
+    ></app-form-text-input>
+    <app-form-text-input
+      [control]="icon_path"
+      [label]="'Makers Icon Path'"
+      [placeholder]="'Please insert makers icons path'"
+    ></app-form-text-input>
+    <button class="btn btn-primary" [disabled]="makerForm.invalid">
+      Add Maker
+    </button>
+  </form>
+  <div>
+    <div
+      *ngIf="name.value.length > 0 || icon_path.value.length > 0"
+      class="preview-maker-cont"
+    >
+      <img [src]="icon_path.value" />
+      <p>{{ name.value }}</p>
+    </div>
+  </div>
+</div>

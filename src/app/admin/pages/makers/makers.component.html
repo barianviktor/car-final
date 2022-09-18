@@ -1,0 +1,11 @@
+<div class="makers-container">
+  <div *ngFor="let maker of makers$ | async" class="preview-maker-cont">
+    <img [src]="maker.icon_path" />
+    <p>{{ maker.name }}</p>
+  </div>
+  <a [routerLink]="['new']">
+    <div class="preview-maker-cont">
+      <p>Add Maker</p>
+    </div>
+  </a>
+</div>

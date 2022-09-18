@@ -1,0 +1,20 @@
+<p>colors works!</p>
+<div class="colors-container">
+  <div class="color-container" *ngFor="let color of colors$ | async">
+    <div
+      class="contained-color"
+      [style]="{ backgroundColor: color.color }"
+    ></div>
+    <div class="color-detail">
+      <p>{{ color.name }}</p>
+    </div>
+  </div>
+  <a [routerLink]="['new']">
+    <div class="color-container">
+      <div class="contained-color default"></div>
+      <div class="color-detail">
+        <p>Add Color</p>
+      </div>
+    </div>
+  </a>
+</div>
