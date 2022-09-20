@@ -20,6 +20,10 @@ import { ImagesFormListComponent } from './components/images-form-list/images-fo
 import { DesignComponent } from './pages/design/design.component';
 import { NewDesignComponent } from './pages/design/new-design/new-design.component';
 import { ModelFormInputComponent } from './components/model-form-input/model-form-input.component';
+import { SmartCardsListComponent } from './components/smart-cards-list/smart-cards-list.component';
+import { SmartpointIconComponent } from './components/smartpoint-icon/smartpoint-icon.component';
+import { SmartpointFormComponent } from './components/smartpoint-form/smartpoint-form.component';
+import { DesignFormInputComponent } from './components/design-form-input/design-form-input.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +46,10 @@ import { ModelFormInputComponent } from './components/model-form-input/model-for
     DesignComponent,
     NewDesignComponent,
     ModelFormInputComponent,
+    SmartCardsListComponent,
+    SmartpointIconComponent,
+    SmartpointFormComponent,
+    DesignFormInputComponent,
   ],
   imports: [SharedModule, AdminRoutingModule],
 })

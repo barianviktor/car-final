@@ -1,1 +1,28 @@
-<p>model-form-input works!</p>
+<div>
+  <h3>Model</h3>
+  <div class="maker-container" *ngIf="makers$ | async as makers">
+    <div
+      (click)="setMaker(makerItem.id)"
+      [class.selected]="maker.value == makerItem.id"
+      class="maker-icon"
+      *ngFor="let makerItem of makers"
+    >
+      <img [src]="makerItem.icon_path" />
+      <h5>{{ makerItem.name }}</h5>
+    </div>
+    <a target="_blank" href="/makers/new">
+      <div class="maker-icon">
+        <h5>New Maker</h5>
+      </div>
+    </a>
+  </div>
+
+  <div>
+    <app-form-text-input
+      [control]="name"
+      [label]="'Model`s Name'"
+      [placeholder]="'Please enter the models name'"
+    ></app-form-text-input>
+  </div>
+</div>
+<hr />

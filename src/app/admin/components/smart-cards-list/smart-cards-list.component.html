@@ -1,0 +1,13 @@
+<div>
+  <h3>Smartcard</h3>
+  <app-smart-card-form
+    *ngFor="let smartcard of smartcards.controls; let i = index"
+    [smartcard]="castAbsToFg(smartcard)"
+    [index]="i"
+    (removeSmartcard)="removeSmartcard($event)"
+  ></app-smart-card-form>
+  <button (click)="addSmartcard()" type="button" class="btn btn-primary">
+    Add Smartcard
+  </button>
+</div>
+<hr />

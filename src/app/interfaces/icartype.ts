@@ -8,7 +8,7 @@ import { Ismartcard } from './ismartcard';
 export interface Icartype {
   id?: number;
   articles: Iarticle[];
-  smartcard: Ismartcard;
+  smartcards: Ismartcard[];
   seats: number;
   title: string;
   titleImage: Iimage;

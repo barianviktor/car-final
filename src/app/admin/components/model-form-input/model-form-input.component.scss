@@ -1,0 +1,32 @@
+.maker-container{
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-auto-rows: auto;
+    padding: 10px;
+}
+
+.maker-icon{
+    margin: auto;
+    width: 80%;
+    cursor: pointer;
+    display: flex;
+    border: 1px solid rgb(41, 41, 41);
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 280px;
+    flex-direction: column;
+}
+.maker-icon img{
+    width: 70%;
+    margin: 25px auto;
+
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.selected{
+    background-color: rgb(241, 241, 241);
+    border: 1px solid rgb(248, 25, 25);
+}

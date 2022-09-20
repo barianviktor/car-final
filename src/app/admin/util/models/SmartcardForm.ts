@@ -1,5 +1,6 @@
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { IsmartcardForm } from '../interfaces/smartcard-form.interface';
+import { SmartpointForm } from './SmartpointForm';
 
 export class SmartcardForm extends FormGroup<IsmartcardForm> {
   constructor() {
@@ -8,7 +9,7 @@ export class SmartcardForm extends FormGroup<IsmartcardForm> {
         validators: [Validators.required],
         nonNullable: true,
       }),
-      smartpoints: new FormArray([]),
+      smartpoints: new FormArray<SmartpointForm>([]),
     });
   }
 }

@@ -17,7 +17,7 @@ export class ArticleFormListComponent implements OnInit {
     return article as ArticleForm;
   }
   onAddArticle() {
-    let articleFormGroup: FormGroup<IArticleForm> = new ArticleForm();
+    let articleFormGroup: ArticleForm = new ArticleForm();
     this.articles.push(articleFormGroup);
   }
   removeItem(index: number) {

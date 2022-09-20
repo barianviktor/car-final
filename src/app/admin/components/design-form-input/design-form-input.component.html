@@ -1,0 +1,19 @@
+<div>
+  <h3>Design</h3>
+  <div *ngIf="designs$ | async as designs">
+    <div
+      (click)="setDesign(design.id)"
+      class="design-item"
+      *ngFor="let design of designs"
+    >
+      <p [class.selected]="designForm.value == design.id">
+        {{ design.name }}
+      </p>
+    </div>
+    <a href="/designs/new" target="_blank">
+      <div class="design-item">
+        <p>Add new Design</p>
+      </div>
+    </a>
+  </div>
+</div>

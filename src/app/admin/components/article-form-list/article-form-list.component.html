@@ -1,4 +1,5 @@
 <div>
+  <h3>Articles</h3>
   <app-article-form-item
     *ngFor="let article of articles.controls; let i = index"
     [articleForm]="castArticle(article)"
@@ -9,3 +10,4 @@
     Add Article
   </button>
 </div>
+<hr />

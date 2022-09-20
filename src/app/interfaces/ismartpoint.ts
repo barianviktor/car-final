@@ -1,10 +1,10 @@
 import { Iimage } from './iimage';
 
 export interface Ismartpoint {
-  id: number;
+  id?: number;
   title: string;
   description: string;
-  image: Iimage;
+  image?: Iimage;
   x: number;
   y: number;
 }

@@ -1,4 +1,5 @@
-<form [formGroup]="smartcard">
+<div class="smartcard-item">
+  <h4>#{{ index + 1 }} Smartcard</h4>
   <app-form-text-input
     [control]="image"
     [label]="'Smartcard Image'"
@@ -6,66 +7,24 @@
   ></app-form-text-input>
   <div class="smartcard-image-container">
     <img (click)="addSmartPoint($event)" [src]="image.value" />
-    <div
-      class="smartpoint-container"
-      [class.selected]="openedSmartPoint == i"
-      [ngStyle]="{
-        left: smartpoint.value.x + '%',
-        top: smartpoint.value.y + '%'
-      }"
+    <app-smartpoint-icon
       *ngFor="let smartpoint of smartpoints.controls; let i = index"
+      [x]="smartpoint.value.x"
+      [y]="smartpoint.value.y"
+      [selected]="openedSmartPoint == i"
       (click)="handleSmartPoint(i)"
-    >
-      <div class="smartpoint-mid-circle">
-        <div class="smartpoint-inner-circle"></div>
-      </div>
-    </div>
+    ></app-smartpoint-icon>
   </div>
-  <div class="accordion accordion-flush">
-    <div
+  <div>
+    <app-smartpoint-form
       *ngFor="let smartpoint of smartpoints.controls; let i = index"
-      class="accordion-item"
+      [smartpoint]="castAbsToFg(smartpoint)"
+      [selected]="openedSmartPoint == i"
+      [index]="i"
+      (deleteSmartpoint)="removeSmartpoint($event)"
+      (selectSmartpoint)="handleSmartPoint($event)"
     >
-      <h2 (click)="handleSmartPoint(i)" class="accordion-header">
-        <button
-          class="accordion-button collapsed"
-          [class.selected]="openedSmartPoint == i"
-        >
-          #{{ i + 1 }} Smartpoint
-        </button>
-      </h2>
-      <div
-        class="accordion-collapse collapse"
-        [class.show]="openedSmartPoint == i"
-      >
-        <div class="accordion-body">
-          <div class="smartpoint-form">
-            <app-form-text-input
-              [control]="castAbsToFormControl(smartpoint.get('title')!)"
-              [label]="'Smartpoint Title'"
-              [placeholder]="'Please insert title'"
-            ></app-form-text-input>
-            <app-form-text-input
-              [control]="castAbsToFormControl(smartpoint.get('image')!)"
-              [label]="'Smartpoint Image'"
-              [placeholder]="'You may insert an image'"
-            ></app-form-text-input>
-            <app-form-text-input
-              [control]="castAbsToFormControl(smartpoint.get('description')!)"
-              [label]="'Smartpoint Description'"
-              [placeholder]="'You may insert a Description'"
-            ></app-form-text-input>
-          </div>
-          <div class="smartpoint-controller">
-            <h4>{{ smartpoint.get("title")?.value }}</h4>
-            <img [src]="smartpoint.get('image')?.value" alt="" />
-            <p>{{ smartpoint.get("description")?.value }}</p>
-            <button (click)="removeSmartpoint(i)" class="btn btn-danger">
-              Remove Smartpoint
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+    </app-smartpoint-form>
   </div>
-</form>
+  <button (click)="onDelete()" class="btn btn-danger">Delete Smartcard</button>
+</div>

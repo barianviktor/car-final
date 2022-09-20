@@ -1,18 +1,16 @@
 <div>
-  <!-- [articleForm]="articles.controls" -->
-  <!-- <app-article
-    *ngFor="let article of articles.controls; let i = index"
-    [articleForm]="castArticle(article)"
-    [index]="i"
-  ></app-article> -->
   <form [formGroup]="cartypeForm" (ngSubmit)="handleSubmit()">
+    <button type="submit" class="btn btn-lg btn-dark">
+      Submit New Car Type
+    </button>
     <div class="m-3">
-      <app-model-form-input></app-model-form-input>
+      <app-model-form-input [modelForm]="model"></app-model-form-input>
     </div>
     <div class="m-3">
-      <app-images-form-list [images]="images"></app-images-form-list>
+      <app-design-form-input [designForm]="design"></app-design-form-input>
     </div>
     <div class="m-3">
+      <h3>Title</h3>
       <app-form-text-input
         [control]="title"
         [label]="'Car type Title'"
@@ -32,21 +30,24 @@
       <h3 style="text-align: center">{{ title.value }}</h3>
       <img class="w-100" [src]="titleImage.value" alt="" />
     </div>
+    <hr />
     <div class="m-3">
+      <h3>Seats</h3>
       <app-form-input-number
         [control]="seats"
         [label]="'Seats'"
         [placeholder]="'Please enter the number of seats of the car'"
       ></app-form-input-number>
+      <hr />
     </div>
     <div class="m-3">
-      <app-smart-card-form [smartcard]="smartcard"> </app-smart-card-form>
+      <app-smart-cards-list [smartcards]="smartcards"> </app-smart-cards-list>
     </div>
     <div class="m-3">
       <app-article-form-list [articles]="articles"></app-article-form-list>
     </div>
-    <button type="submit" class="btn btn-lg btn-dark">
-      Submit New Car Type
-    </button>
+    <div class="m-3">
+      <app-images-form-list [images]="images"></app-images-form-list>
+    </div>
   </form>
 </div>

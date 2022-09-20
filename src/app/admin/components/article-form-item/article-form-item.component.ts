@@ -21,9 +21,7 @@ export class ArticleFormItemComponent implements OnInit {
   get image(): FormControl {
     return this.articleForm.get('image') as FormControl;
   }
-  ngOnInit(): void {
-    console.log(this.articleForm);
-  }
+  ngOnInit(): void {}
   onRemoveArticle() {
     this.removeArticle.emit(this.index);
   }
