@@ -1,0 +1,18 @@
+<div>
+  <h1>New Design</h1>
+  <form [formGroup]="designForm" (ngSubmit)="onSubmit()">
+    <app-form-text-input
+      [control]="name"
+      [label]="'Name'"
+      [placeholder]="'Enter the name of this design'"
+    ></app-form-text-input>
+
+    <button
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="designForm.invalid"
+    >
+      Add Color
+    </button>
+  </form>
+</div>

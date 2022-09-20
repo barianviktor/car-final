@@ -5,6 +5,48 @@
     [articleForm]="castArticle(article)"
     [index]="i"
   ></app-article> -->
-  <app-smart-card-form></app-smart-card-form>
-  <app-article-form-list [articles]="articles"></app-article-form-list>
+  <form [formGroup]="cartypeForm" (ngSubmit)="handleSubmit()">
+    <div class="m-3">
+      <app-model-form-input></app-model-form-input>
+    </div>
+    <div class="m-3">
+      <app-images-form-list [images]="images"></app-images-form-list>
+    </div>
+    <div class="m-3">
+      <app-form-text-input
+        [control]="title"
+        [label]="'Car type Title'"
+        [placeholder]="'Please enter a Car Type Title'"
+      >
+      </app-form-text-input>
+    </div>
+    <div class="m-3">
+      <app-form-text-input
+        [control]="titleImage"
+        [label]="'Title Image'"
+        [placeholder]="'Please enter an url of your Cars type Title Image'"
+      >
+      </app-form-text-input>
+    </div>
+    <div class="title-preview w-50 m-auto">
+      <h3 style="text-align: center">{{ title.value }}</h3>
+      <img class="w-100" [src]="titleImage.value" alt="" />
+    </div>
+    <div class="m-3">
+      <app-form-input-number
+        [control]="seats"
+        [label]="'Seats'"
+        [placeholder]="'Please enter the number of seats of the car'"
+      ></app-form-input-number>
+    </div>
+    <div class="m-3">
+      <app-smart-card-form [smartcard]="smartcard"> </app-smart-card-form>
+    </div>
+    <div class="m-3">
+      <app-article-form-list [articles]="articles"></app-article-form-list>
+    </div>
+    <button type="submit" class="btn btn-lg btn-dark">
+      Submit New Car Type
+    </button>
+  </form>
 </div>

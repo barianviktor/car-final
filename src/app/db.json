@@ -43,7 +43,6 @@
       "id": 0,
       "name": "Sedan"
     },
-
     {
       "id": 1,
       "name": "Hatchback"
@@ -72,15 +71,34 @@
       "id": 7,
       "name": "Van / Minivan"
     }
+
   ],
   "motors": [
-    { "id": 0, "name": "Electric" },
-    { "id": 1, "name": "Plug in Hybrid" },
-    { "id": 2, "name": "Gasoline" },
-    { "id": 3, "name": "Diesel" }
+    {
+      "id": 0,
+      "name": "Electric"
+    },
+    {
+      "id": 1,
+      "name": "Plug in Hybrid"
+    },
+    {
+      "id": 2,
+      "name": "Gasoline"
+    },
+    {
+      "id": 3,
+      "name": "Diesel"
+    }
   ],
   "transmission": [
-    { "id": 0, "name": "Automatic" },
-    { "id": 1, "name": "Manual" }
+    {
+      "id": 0,
+      "name": "Automatic"
+    },
+    {
+      "id": 1,
+      "name": "Manual"
+    }
   ]
 }

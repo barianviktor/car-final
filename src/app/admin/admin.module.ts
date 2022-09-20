@@ -15,6 +15,11 @@ import { ArticleFormItemComponent } from './components/article-form-item/article
 import { FormColorInputComponent } from './util/form-color-input/form-color-input.component';
 import { FormTextInputComponent } from './util/form-text-input/form-text-input.component';
 import { SmartCardFormComponent } from './components/smart-card-form/smart-card-form.component';
+import { FormInputNumberComponent } from './util/form-input-number/form-input-number.component';
+import { ImagesFormListComponent } from './components/images-form-list/images-form-list.component';
+import { DesignComponent } from './pages/design/design.component';
+import { NewDesignComponent } from './pages/design/new-design/new-design.component';
+import { ModelFormInputComponent } from './components/model-form-input/model-form-input.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +37,11 @@ import { SmartCardFormComponent } from './components/smart-card-form/smart-card-
     ArticleFormListComponent,
     ArticleFormItemComponent,
     SmartCardFormComponent,
+    FormInputNumberComponent,
+    ImagesFormListComponent,
+    DesignComponent,
+    NewDesignComponent,
+    ModelFormInputComponent,
   ],
   imports: [SharedModule, AdminRoutingModule],
 })

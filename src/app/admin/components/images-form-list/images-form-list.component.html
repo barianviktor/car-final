@@ -1,0 +1,23 @@
+<div>
+  <div
+    *ngFor="let image of images.controls; let i = index"
+    class="image-item m-3"
+  >
+    <div class="image-form">
+      <app-form-text-input
+        [control]="castAbsToFc(image)"
+        [label]="'#' + (i + 1) + ' image'"
+        [placeholder]="'Please insert the url of an image'"
+      ></app-form-text-input>
+    </div>
+    <div class="image-control">
+      <img [src]="image.value" alt="" />
+      <button class="btn btn-danger" (click)="removeImage(i)">
+        Delete Image
+      </button>
+    </div>
+  </div>
+  <button type="button" (click)="addImage()" class="btn btn-primary">
+    Add an Image Item
+  </button>
+</div>

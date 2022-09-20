@@ -1,1 +1,71 @@
-<div (click)="addCursor($event)" class="template-container"></div>
+<form [formGroup]="smartcard">
+  <app-form-text-input
+    [control]="image"
+    [label]="'Smartcard Image'"
+    [placeholder]="'Please insert an image url'"
+  ></app-form-text-input>
+  <div class="smartcard-image-container">
+    <img (click)="addSmartPoint($event)" [src]="image.value" />
+    <div
+      class="smartpoint-container"
+      [class.selected]="openedSmartPoint == i"
+      [ngStyle]="{
+        left: smartpoint.value.x + '%',
+        top: smartpoint.value.y + '%'
+      }"
+      *ngFor="let smartpoint of smartpoints.controls; let i = index"
+      (click)="handleSmartPoint(i)"
+    >
+      <div class="smartpoint-mid-circle">
+        <div class="smartpoint-inner-circle"></div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion accordion-flush">
+    <div
+      *ngFor="let smartpoint of smartpoints.controls; let i = index"
+      class="accordion-item"
+    >
+      <h2 (click)="handleSmartPoint(i)" class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          [class.selected]="openedSmartPoint == i"
+        >
+          #{{ i + 1 }} Smartpoint
+        </button>
+      </h2>
+      <div
+        class="accordion-collapse collapse"
+        [class.show]="openedSmartPoint == i"
+      >
+        <div class="accordion-body">
+          <div class="smartpoint-form">
+            <app-form-text-input
+              [control]="castAbsToFormControl(smartpoint.get('title')!)"
+              [label]="'Smartpoint Title'"
+              [placeholder]="'Please insert title'"
+            ></app-form-text-input>
+            <app-form-text-input
+              [control]="castAbsToFormControl(smartpoint.get('image')!)"
+              [label]="'Smartpoint Image'"
+              [placeholder]="'You may insert an image'"
+            ></app-form-text-input>
+            <app-form-text-input
+              [control]="castAbsToFormControl(smartpoint.get('description')!)"
+              [label]="'Smartpoint Description'"
+              [placeholder]="'You may insert a Description'"
+            ></app-form-text-input>
+          </div>
+          <div class="smartpoint-controller">
+            <h4>{{ smartpoint.get("title")?.value }}</h4>
+            <img [src]="smartpoint.get('image')?.value" alt="" />
+            <p>{{ smartpoint.get("description")?.value }}</p>
+            <button (click)="removeSmartpoint(i)" class="btn btn-danger">
+              Remove Smartpoint
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

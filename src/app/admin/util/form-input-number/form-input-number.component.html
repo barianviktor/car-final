@@ -1,0 +1,16 @@
+<div class="form-group">
+  <label>{{ label }} {{ isItRequired() }}</label>
+  <input
+    [formControl]="control"
+    type="number"
+    class="form-control"
+    [placeholder]="placeholder"
+    [class.is-invalid]="control.invalid && control.touched"
+  />
+  <div class="error-cont" *ngIf="control.invalid && control.touched">
+    <p *ngIf="control.hasError('required')">This field is required</p>
+    <p *ngIf="control.hasError('min')">
+      The minimum amount of seats is ({{ control.getError("min").min }})
+    </p>
+  </div>
+</div>

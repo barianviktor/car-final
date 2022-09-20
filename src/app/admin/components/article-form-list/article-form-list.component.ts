@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { AbstractControl, FormArray, FormGroup } from '@angular/forms';
+import { FormArray, FormGroup } from '@angular/forms';
 import { IArticleForm } from '../../util/interfaces/article-form.interface';
 import { ArticleForm } from '../../util/models/ArticleForm';
 
@@ -12,9 +12,7 @@ export class ArticleFormListComponent implements OnInit {
   @Input() articles!: FormArray;
   constructor() {}
 
-  ngOnInit(): void {
-    console.log(this.articles);
-  }
+  ngOnInit(): void {}
   castArticle(article: any) {
     return article as ArticleForm;
   }

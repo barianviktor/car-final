@@ -5,6 +5,8 @@ import { CartypeComponent } from './pages/cartype/cartype.component';
 import { NewCartypeComponent } from './pages/cartype/new-cartype/new-cartype.component';
 import { ColorsComponent } from './pages/colors/colors.component';
 import { NewColorComponent } from './pages/colors/new-color/new-color.component';
+import { DesignComponent } from './pages/design/design.component';
+import { NewDesignComponent } from './pages/design/new-design/new-design.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MakersComponent } from './pages/makers/makers.component';
 import { NewMakerComponent } from './pages/makers/new-maker/new-maker.component';
@@ -42,6 +44,14 @@ const routes: Routes = [
       {
         path: 'cartypes/new',
         component: NewCartypeComponent,
+      },
+      {
+        path: 'designs',
+        component: DesignComponent,
+      },
+      {
+        path: 'designs/new',
+        component: NewDesignComponent,
       },
     ],
   },

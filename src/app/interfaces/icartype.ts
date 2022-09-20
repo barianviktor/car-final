@@ -7,13 +7,12 @@ import { Ismartcard } from './ismartcard';
 
 export interface Icartype {
   id?: number;
-  model: Imodel;
   articles: Iarticle[];
   smartcard: Ismartcard;
-  // motor:Imotor,
-  design: Idesign;
   seats: number;
   title: string;
-  images: Iimage[];
   titleImage: Iimage;
+  model: Imodel;
+  design: Idesign;
+  images: Iimage[];
 }
