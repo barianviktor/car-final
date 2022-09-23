@@ -1,19 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  FormArray,
-  FormBuilder,
-  FormControl,
-  FormGroup,
-  Validators,
-} from '@angular/forms';
+import { FormArray, FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { IcartypeForm } from 'src/app/admin/util/interfaces/cartype-form.interface';
 import { ArticleForm } from 'src/app/admin/util/models/ArticleForm';
 import { CartypeForm } from 'src/app/admin/util/models/CartypeForm';
 import { ModelForm } from 'src/app/admin/util/models/ModelForm';
 import { SmartcardForm } from 'src/app/admin/util/models/SmartcardForm';
 import { SmartpointForm } from 'src/app/admin/util/models/SmartpointForm';
+import { Imodeldto } from 'src/app/interfaces/dto/imodeldto';
 import { Iarticle } from 'src/app/interfaces/iarticle';
-import { Icartype } from 'src/app/interfaces/icartype';
 import { Iimage } from 'src/app/interfaces/iimage';
 import { Ismartcard } from 'src/app/interfaces/ismartcard';
 import { Ismartpoint } from 'src/app/interfaces/ismartpoint';
@@ -26,7 +21,7 @@ import { CartypeService } from 'src/app/services/cartype.service';
 })
 export class NewCartypeComponent implements OnInit {
   cartypeForm: FormGroup<IcartypeForm>;
-  constructor(private cartypeService: CartypeService) {
+  constructor(private cartypeService: CartypeService, private router: Router) {
     this.cartypeForm = new CartypeForm();
   }
   get images(): FormArray {
@@ -111,6 +106,14 @@ export class NewCartypeComponent implements OnInit {
             },
             {
               description:
+                'asddddddddddddddddas asfas fs     qwewqewqe sadasnbg dsadqweqw',
+              image: '',
+              title: 'MULTIBEAM LED',
+              x: 44,
+              y: 57,
+            },
+            {
+              description:
                 'A HANDS-FREE ACCESS segítségével könnyen berakodhatja a csomagjait: A csomagtérfedél érintés nélkül nyílik ki. A rendszernek a hátsó lökhárító alá beépített szenzorai felismerik az Ön láblendítő mozdulatát. Ez különösen akkor hasznos segítség, amikor a bevásárlásból jövet egyik keze sem szabad a sok csomag miatt.',
               image:
                 'https://www.mercedes-benz.hu/content/hungary/hu/passengercars/models/saloon/a-class/overview/_jcr_content/root/responsivegrid/tabs/tabitem/hotspot_module/hotspot_simple_image/hotspot_item_1034355614.component.damq5.3195071863479.jpg/mercedes-benz-a-class-v177-design-contentgallery-rearenddesign-02-2730x1536-07-2018.jpg',
@@ -155,17 +158,7 @@ export class NewCartypeComponent implements OnInit {
     };
   }
   generateObject() {
-    let articles: Iarticle[] = [];
     let smartcards: Ismartcard[] = [];
-    let images: Iimage[] = [];
-    this.articles.value.forEach((a: any) => {
-      let article: Iarticle = {
-        description: a.description,
-        title: a.title,
-        image: a.image ? this.createImageObject(a.image) : undefined,
-      };
-      articles.push(article);
-    });
     this.smartcards.value.forEach((smc: any) => {
       let smartCard: Ismartcard = {
         image: this.createImageObject(smc.image),
@@ -178,31 +171,49 @@ export class NewCartypeComponent implements OnInit {
           title: smp.title,
           x: smp.x,
           y: smp.y,
-          image: smp.image ? this.createImageObject(smp.image) : undefined,
+          image: smp.image ? this.createImageObject(smp.image) : null,
         };
         smartCard.smartpoints.push(smartPoint);
       });
 
       smartcards.push(smartCard);
     });
+
+    let images: Iimage[] = [];
     this.images.value.forEach((i: any) => {
       images.push(this.createImageObject(i));
     });
-    let cartype: Icartype = {
-      articles: articles,
-      images: images,
-      smartcards: smartcards,
-      seats: this.seats.value,
-      title: this.title.value,
-      titleImage: this.titleImage.value,
-      /*  design: this.design.value,
-      model: this.model.value, */
+
+    let articles: Iarticle[] = [];
+    this.articles.value.forEach((a: any) => {
+      let article: Iarticle = {
+        description: a.description,
+        title: a.title,
+        image: a.image ? this.createImageObject(a.image) : null,
+      };
+      articles.push(article);
+    });
+
+    let model: Imodeldto = {
+      name: this.model.value.name!,
+      maker: this.model.value.maker!,
     };
+    this.cartypeService.addCartype(
+      images,
+      articles,
+      smartcards,
+      model,
+      this.design.value,
+      this.seats.value,
+      this.title.value,
+      this.createImageObject(this.titleImage.value)
+    );
   }
   handleSubmit() {
     this.populateForm();
     if (this.cartypeForm.valid) {
       this.generateObject();
+      this.router.navigate(['/cartypes']);
     } else {
       this.cartypeForm.markAllAsTouched();
     }

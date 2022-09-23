@@ -16,7 +16,7 @@ export class DesignService {
         console.log(x);
       });
   }
-  getDesign(id: number) {
+  getDesign$(id: number) {
     return this.http.get<Idesign>(environment.api + '/designs/' + id);
   }
   getDesigns() {

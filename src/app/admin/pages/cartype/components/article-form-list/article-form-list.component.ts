@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormArray, FormGroup } from '@angular/forms';
-import { IArticleForm } from '../../util/interfaces/article-form.interface';
-import { ArticleForm } from '../../util/models/ArticleForm';
+import { IArticleForm } from '../../../../util/interfaces/article-form.interface';
+import { ArticleForm } from '../../../../util/models/ArticleForm';
 
 @Component({
   selector: 'app-article-form-list',

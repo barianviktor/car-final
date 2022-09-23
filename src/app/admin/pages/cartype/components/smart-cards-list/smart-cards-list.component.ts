@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { AbstractControl, FormArray, FormGroup } from '@angular/forms';
-import { SmartcardForm } from '../../util/models/SmartcardForm';
+import { SmartcardForm } from '../../../../util/models/SmartcardForm';
 
 @Component({
   selector: 'app-smart-cards-list',

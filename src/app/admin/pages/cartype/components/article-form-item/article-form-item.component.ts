@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { ArticleForm } from '../../util/models/ArticleForm';
+import { ArticleForm } from 'src/app/admin/util/models/ArticleForm';
 
 @Component({
   selector: 'app-article-form-item',

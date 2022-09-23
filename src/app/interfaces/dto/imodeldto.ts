@@ -1,4 +1,4 @@
-export interface Imodel {
+export interface Imodeldto {
   id?: number;
   maker: number;
   name: string;

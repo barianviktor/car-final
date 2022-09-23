@@ -17,4 +17,7 @@ export class ColorService {
   getColors(): Observable<Icolor[]> {
     return this.http.get<Icolor[]>(environment.api + '/colors');
   }
+  getColor$(id: number): Observable<Icolor> {
+    return this.http.get<Icolor>(environment.api + '/colors/' + id);
+  }
 }

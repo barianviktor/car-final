@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Iimage } from '../interfaces/iimage';
 
@@ -14,7 +15,12 @@ export class ImageService {
       console.log(x);
     });
   }
-  getImage(id: number) {
+
+  addImage$(image: Iimage): Observable<Iimage> {
+    return this.http.post<Iimage>(environment.api + '/images', image);
+  }
+
+  getImage$(id: number) {
     return this.http.get<Iimage>(environment.api + '/images/' + id);
   }
 }

@@ -71,7 +71,6 @@
       "id": 7,
       "name": "Van / Minivan"
     }
-
   ],
   "motors": [
     {
@@ -99,6 +98,182 @@
     {
       "id": 1,
       "name": "Manual"
+    }
+  ],
+  "articles": [
+    {
+      "description": "Tudjon meg mindent a fogyasztásról, a motorról, a teljesítményről, a csomagtér térfogatáról és a többi műszaki adatról.",
+      "title": "Az A-osztály limuzin műszaki adatai.",
+      "image": null,
+      "id": 1
+    },
+    {
+      "description": "Tudjon meg többet a Mercedes-Benz A-osztály limuzin belső terének kiemelkedő elemeiről. Az MBUX széles szériafelszereltsége mellett három kivitelváltozat közül választhat az ülések, a kormánykerék, a kárpitozás és még sok más opció személyre szabásához: Style, Progressive és AMG Line.",
+      "title": "Az A-osztály limuzin belső megjelenése.",
+      "image": 1,
+      "id": 2
+    },
+    {
+      "description": "A Plug-in Hybrid technológiával felszerelt A-osztály limuzin egyesíti a villanymotor dinamikáját és hatékonyságát a belső égésű motorok hatótávolságával akár 160 kW (218 LE) rendszerteljesítményig,[1] és 450 Nm maximális forgatónyomatékig.[1]. Az elektromotor további teljesítményt bocsát rendelkezésre a gyorsításnál, vagy városban közlekedve egyedül akár 60-71 kilométert[2], bír, így Ön napi útjai nagyobb részét a környezetet kímélve, helyi károsanyag-kibocsátás nélkül teheti meg.",
+      "title": "A 250 e Plug-in Hybrid",
+      "image": 2,
+      "id": 3
+    }
+  ],
+  "images": [
+    {
+      "date": "2022-09-23T13:21:39.310Z",
+      "path": "https://www.mercedes-benz.hu/content/hungary/hu/passengercars/models/saloon/a-class/overview/_jcr_content/root/responsivegrid/tabs_1344672560/tabitem/hotspot_module/hotspot_simple_image.component.damq4.3304703354193.jpg/mercedes-benz-a-class-v177-highlights-02-2730x1536-01-2021.jpg",
+      "id": 1
+    },
+    {
+      "date": "2022-09-23T13:21:39.310Z",
+      "path": "https://www.mercedes-benz.hu/content/hungary/hu/passengercars/models/saloon/a-class/overview/_jcr_content/root/responsivegrid/simple_teaser/simple_teaser_item_c.component.damq6.3306885772390.jpg/mercedes-benz-a-class-v177-highlights-plug-in-hybrid-2730x1536-11-2021.jpg",
+      "id": 2
+    },
+    {
+      "date": "2022-09-23T13:21:39.310Z",
+      "path": "https://www.mercedes-benz.hu/content/hungary/hu/passengercars/models/saloon/a-class/overview/_jcr_content/root/responsivegrid/tabs_1681858178/tabitem/hotspot_module/hotspot_simple_image.component.damq4.3304557582392.jpg/mercedes-amg-a-class-v177-design-exterior-2730x1536-05-2019_cropped.jpg",
+      "id": 3
+    },
+    {
+      "date": "2022-09-23T13:21:39.310Z",
+      "path": "https://www.mercedes-benz.hu/content/hungary/hu/passengercars/models/saloon/a-class/overview/_jcr_content/root/responsivegrid/tabs_1681858178/tabitem/hotspot_module/hotspot_simple_image/hotspot_item_33963964.component.damq5.3304557957416.jpg/mercedes-amg-a-class-v177-design-exterior-wheels-2048x1536-02-2020_cropped-B.jpg",
+      "id": 4
+    },
+    {
+      "date": "2022-09-23T13:21:39.310Z",
+      "path": "https://www.mercedes-benz.hu/content/hungary/hu/passengercars/models/saloon/a-class/overview/_jcr_content/root/responsivegrid/tabs_1681858178/tabitem/hotspot_module/hotspot_simple_image/hotspot_item_230857221.component.damq5.3304445720455.jpg/mercedes-amg-a-class-v177-design-exterior-rear-2730x1536-02-2020.jpg",
+      "id": 5
+    },
+    {
+      "date": "2022-09-23T13:21:39.310Z",
+      "path": "https://www.mercedes-benz.hu/content/hungary/hu/passengercars/models/saloon/a-class/overview/_jcr_content/root/responsivegrid/tabs_1681858178/tabitem_465459545/hotspot_module/hotspot_simple_image.component.damq4.3304445972582.jpg/mercedes-amg-a-class-v177-design-interior-2730x1536-03-2021.jpg",
+      "id": 6
+    },
+    {
+      "date": "2022-09-23T13:21:39.310Z",
+      "path": "https://www.mercedes-benz.hu/content/hungary/hu/passengercars/models/saloon/a-class/overview/_jcr_content/root/responsivegrid/tabs_1681858178/tabitem_1135868572/hotspot_module_1714055044/hotspot_simple_image.component.damq4.3304447275086.jpg/mercedes-amg-a-class-v177-performance-2730x1536-05-2019.jpg",
+      "id": 7
+    },
+    {
+      "date": "2022-09-23T13:21:39.310Z",
+      "path": "https://www.mercedes-benz.hu/content/hungary/hu/passengercars/models/saloon/a-class/overview/_jcr_content/root/responsivegrid/tabs/tabitem/hotspot_module/hotspot_simple_image.component.damq4.3303754963959.jpg/mercedes-benz-a-class-v177-design-contentgallery-front-01-2730x1536-07-2018.jpg",
+      "id": 8
+    },
+    {
+      "date": "2022-09-23T13:21:39.310Z",
+      "path": "https://www.mercedes-benz.hu/content/hungary/hu/passengercars/models/saloon/a-class/overview/_jcr_content/root/responsivegrid/tabs/tabitem/hotspot_module/hotspot_simple_image/hotspot_item_841962961.component.damq5.3203698447570.jpg/mercedes-benz-a-class-v177-assistancesystems-contentgallery-multibeamled-02-2730x1536-02-2019.jpg",
+      "id": 9
+    },
+    {
+      "date": "2022-09-23T13:21:39.310Z",
+      "path": "https://www.mercedes-benz.hu/content/hungary/hu/passengercars/models/saloon/a-class/overview/_jcr_content/root/responsivegrid/simple_stage.component.damq4.3305804656391.jpg/A-Class-Saloon_V177_Stage_Overview_2730x1213.jpg",
+      "id": 10
+    },
+    {
+      "date": "2022-09-23T13:21:39.310Z",
+      "path": "https://www.mercedes-benz.hu/content/hungary/hu/passengercars/models/saloon/a-class/overview/_jcr_content/root/responsivegrid/tabs_1681858178/tabitem/hotspot_module/hotspot_simple_image/hotspot_item_230857221.component.damq5.3304445720455.jpg/mercedes-amg-a-class-v177-design-exterior-rear-2730x1536-02-2020.jpg",
+      "id": 11
+    },
+    {
+      "date": "2022-09-23T13:21:39.310Z",
+      "path": "https://www.mercedes-benz.hu/content/hungary/hu/passengercars/models/saloon/a-class/overview/_jcr_content/root/responsivegrid/tabs_1681858178/tabitem_465459545/hotspot_module/hotspot_simple_image.component.damq4.3304445972582.jpg/mercedes-amg-a-class-v177-design-interior-2730x1536-03-2021.jpg",
+      "id": 12
+    },
+    {
+      "date": "2022-09-23T13:21:39.310Z",
+      "path": "https://www.mercedes-benz.hu/content/hungary/hu/passengercars/models/saloon/a-class/overview/_jcr_content/root/responsivegrid/tabs_1681858178/tabitem/hotspot_module/hotspot_simple_image/hotspot_item_33963964.component.damq5.3304557957416.jpg/mercedes-amg-a-class-v177-design-exterior-wheels-2048x1536-02-2020_cropped-B.jpg",
+      "id": 13
+    },
+    {
+      "date": "2022-09-23T13:21:39.310Z",
+      "path": "https://www.mercedes-benz.hu/content/hungary/hu/passengercars/models/saloon/a-class/overview/_jcr_content/root/responsivegrid/tabs_1681858178/tabitem_465459545/hotspot_module/hotspot_simple_image.component.damq4.3304445972582.jpg/mercedes-amg-a-class-v177-design-interior-2730x1536-03-2021.jpg",
+      "id": 14
+    },
+    {
+      "date": "2022-09-23T13:21:39.310Z",
+      "path": "https://www.mercedes-benz.hu/content/hungary/hu/passengercars/models/saloon/a-class/overview/_jcr_content/root/responsivegrid/tabs_1681858178/tabitem/hotspot_module/hotspot_simple_image/hotspot_item_33963964.component.damq5.3304557957416.jpg/mercedes-amg-a-class-v177-design-exterior-wheels-2048x1536-02-2020_cropped-B.jpg",
+      "id": 15
+    },
+    {
+      "date": "2022-09-23T13:21:39.310Z",
+      "path": "https://www.mercedes-benz.hu/content/hungary/hu/passengercars/models/saloon/a-class/overview/_jcr_content/root/responsivegrid/tabs/tabitem/hotspot_module/hotspot_simple_image/hotspot_item_1034355614.component.damq5.3195071863479.jpg/mercedes-benz-a-class-v177-design-contentgallery-rearenddesign-02-2730x1536-07-2018.jpg",
+      "id": 16
+    }
+  ],
+  "smartpoints": [
+    {
+      "description": "Autópályán, országúton vagy városi forgalomban: Az intelligens világítási funkcióknak köszönhetően az adaptív MULTIBEAM LED fényszórók a körülményekhez igazodva világítják meg az úttestet, a fényszórók pedig egyedileg szabályozható LED-ek segítségével reagálnak az aktuális forgalmi helyzetre.",
+      "title": "MULTIBEAM LED",
+      "x": 33,
+      "y": 64,
+      "image": 9,
+      "id": 1
+    },
+    {
+      "description": "asddddddddddddddddas asfas fs     qwewqewqe sadasnbg dsadqweqw",
+      "title": "MULTIBEAM LED",
+      "x": 44,
+      "y": 57,
+      "image": null,
+      "id": 2
+    },
+    {
+      "description": "A HANDS-FREE ACCESS segítségével könnyen berakodhatja a csomagjait: A csomagtérfedél érintés nélkül nyílik ki. A rendszernek a hátsó lökhárító alá beépített szenzorai felismerik az Ön láblendítő mozdulatát. Ez különösen akkor hasznos segítség, amikor a bevásárlásból jövet egyik keze sem szabad a sok csomag miatt.",
+      "title": "HANDS-FREE ACCESS",
+      "x": 80,
+      "y": 35,
+      "image": 16,
+      "id": 3
+    }
+  ],
+  "smartcards": [
+    {
+      "image": 8,
+      "smartpoints": [
+        1,
+        2,
+        3
+      ],
+      "id": 1
+    }
+  ],
+  "models": [
+    {
+      "name": "Class-A",
+      "maker": 1,
+      "id": 1
+    },
+    {
+      "name": "Class-A",
+      "maker": 1,
+      "id": 2
+    }
+  ],
+  "cartypes": [
+    {
+      "articles": [
+        1,
+        2,
+        3
+      ],
+      "images": [
+        3,
+        7,
+        11,
+        14,
+        15
+      ],
+      "smartcards": [
+        1
+      ],
+      "model": 2,
+      "design": 1,
+      "seats": 5,
+      "title": "A-osztály limuzin.",
+      "titleImage": 10,
+      "id": 1
     }
   ]
 }

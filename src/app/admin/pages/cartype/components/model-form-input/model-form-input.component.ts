@@ -3,7 +3,7 @@ import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { Imaker } from 'src/app/interfaces/imaker';
 import { MakerService } from 'src/app/services/maker.service';
-import { ModelForm } from '../../util/models/ModelForm';
+import { ModelForm } from '../../../../util/models/ModelForm';
 
 @Component({
   selector: 'app-model-form-input',

@@ -5,7 +5,7 @@ import {
   FormControl,
   FormGroup,
 } from '@angular/forms';
-import { SmartpointForm } from '../../util/models/SmartpointForm';
+import { SmartpointForm } from '../../../../util/models/SmartpointForm';
 
 @Component({
   selector: 'app-smart-card-form',

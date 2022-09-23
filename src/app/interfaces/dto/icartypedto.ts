@@ -1,12 +1,13 @@
 export interface Icartypedto {
   id?: number;
-  model: number;
   articles: number[];
-  smartcard: number;
+  images: number[];
+  smartcards: number[];
+
+  model: number;
   // motor:Imotor,
   design: number;
   seats: number;
   title: string;
-  images: number[];
   titleImage: number;
 }

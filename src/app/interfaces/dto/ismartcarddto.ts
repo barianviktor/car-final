@@ -1,4 +1,4 @@
-export interface Ismartcard {
+export interface Ismartcarddto {
   id?: number;
   image: number;
   smartpoints: number[];

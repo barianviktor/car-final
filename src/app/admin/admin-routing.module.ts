@@ -1,26 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin.component';
-import { CartypeComponent } from './pages/cartype/cartype.component';
-import { NewCartypeComponent } from './pages/cartype/new-cartype/new-cartype.component';
 import { ColorsComponent } from './pages/colors/colors.component';
 import { NewColorComponent } from './pages/colors/new-color/new-color.component';
 import { DesignComponent } from './pages/design/design.component';
 import { NewDesignComponent } from './pages/design/new-design/new-design.component';
-import { HomeComponent } from './pages/home/home.component';
 import { MakersComponent } from './pages/makers/makers.component';
 import { NewMakerComponent } from './pages/makers/new-maker/new-maker.component';
 
 const routes: Routes = [
   {
     path: '',
+    pathMatch: 'full',
     component: AdminComponent,
-    children: [
-      {
-        path: '',
-        pathMatch: 'full',
-        component: HomeComponent,
-      },
+    /*     children: [
       {
         path: 'colors',
         component: ColorsComponent,
@@ -37,14 +30,7 @@ const routes: Routes = [
         path: 'makers/new',
         component: NewMakerComponent,
       },
-      {
-        path: 'cartypes',
-        component: CartypeComponent,
-      },
-      {
-        path: 'cartypes/new',
-        component: NewCartypeComponent,
-      },
+
       {
         path: 'designs',
         component: DesignComponent,
@@ -53,7 +39,7 @@ const routes: Routes = [
         path: 'designs/new',
         component: NewDesignComponent,
       },
-    ],
+    ], */
   },
 ];
 
